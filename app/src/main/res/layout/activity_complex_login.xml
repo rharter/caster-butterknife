@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+  <LinearLayout
+      android:id="@+id/start_container"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical">
+
+    <Button
+        android:id="@+id/show_signup1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/label_show_signup"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_gravity="center"
+        android:text="@string/label_or"/>
+
+    <Button
+        android:id="@+id/show_login1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/label_show_login"/>
+
+  </LinearLayout>
+
+  <LinearLayout
+      android:id="@+id/signup_container"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical"
+      >
+
+    <EditText
+        android:id="@+id/full_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_fullname"
+        />
+
+    <EditText
+        android:id="@+id/signup_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_username"
+        />
+
+    <EditText
+        android:id="@+id/signup_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:hint="@string/hint_password"
+        />
+
+    <Button
+        android:id="@+id/signup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/label_signup"
+        />
+
+    <Button
+        android:id="@+id/show_login2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/label_show_login"
+        />
+
+  </LinearLayout>
+
+  <LinearLayout
+      android:id="@+id/login_container"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical"
+      >
+
+    <EditText
+        android:id="@+id/login_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_username"
+        />
+
+    <EditText
+        android:id="@+id/login_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:hint="@string/hint_password"
+        />
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/label_login"
+        />
+
+    <Button
+        android:id="@+id/show_signup2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/label_show_signup"
+        />
+
+  </LinearLayout>
+
+</FrameLayout>
