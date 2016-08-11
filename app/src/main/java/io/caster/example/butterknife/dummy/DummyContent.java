@@ -1,9 +1,11 @@
 package io.caster.example.butterknife.dummy;
 
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import io.caster.example.butterknife.R;
 
 /**
  * Helper class for providing sample content for user interfaces created by
@@ -16,56 +18,44 @@ public class DummyContent {
   /**
    * An array of sample (dummy) items.
    */
-  public static final List<DummyItem> ITEMS = new ArrayList<DummyItem>();
+  public static final List<User> ITEMS = Arrays.asList(
+          new User(1, "frakkar", "Fred Kar", R.drawable.avatar_1),
+          new User(2, "ladylexy", "Lex Xu", R.drawable.avatar_2),
+          new User(3, "erondu", "Blake Smith", R.drawable.avatar_3),
+          new User(4, "adellecharles", "Adelle Charles", R.drawable.avatar_4),
+          new User(5, "jadlimcaco", "Jason Adlimcaco", R.drawable.avatar_5),
+          new User(6, "sauro", "Sam Scheen", R.drawable.avatar_6),
+          new User(7, "jsa", "John Andrews", R.drawable.avatar_7),
+          new User(8, "brynn", "Brynn Flats", R.drawable.avatar_8),
+          new User(9, "itsjonq", "Jon Qu", R.drawable.avatar_9)
+  );
 
   /**
    * A map of sample (dummy) items, by ID.
    */
-  public static final Map<String, DummyItem> ITEM_MAP = new HashMap<String, DummyItem>();
-
-  private static final int COUNT = 25;
+  public static final Map<String, User> ITEM_MAP = new HashMap<String, User>();
 
   static {
     // Add some sample items.
-    for (int i = 1; i <= COUNT; i++) {
-      addItem(createDummyItem(i));
+    for (User user : ITEMS) {
+      ITEM_MAP.put(user.username, user);
     }
-  }
-
-  private static void addItem(DummyItem item) {
-    ITEMS.add(item);
-    ITEM_MAP.put(item.id, item);
-  }
-
-  private static DummyItem createDummyItem(int position) {
-    return new DummyItem(String.valueOf(position), "Item " + position, makeDetails(position));
-  }
-
-  private static String makeDetails(int position) {
-    StringBuilder builder = new StringBuilder();
-    builder.append("Details about Item: ").append(position);
-    for (int i = 0; i < position; i++) {
-      builder.append("\nMore details information here.");
-    }
-    return builder.toString();
   }
 
   /**
    * A dummy item representing a piece of content.
    */
-  public static class DummyItem {
-    public final String id;
-    public final String content;
-    public final String details;
+  public static class User {
+    public final int id;
+    public final String username;
+    public final String name;
+    public final int avatarResId;
 
-    public DummyItem(String id, String content, String details) {
+    public User(int id, String username, String name, int avatarResId) {
       this.id = id;
-      this.content = content;
-      this.details = details;
-    }
-
-    @Override public String toString() {
-      return content;
+      this.username = username;
+      this.name = name;
+      this.avatarResId = avatarResId;
     }
   }
 }

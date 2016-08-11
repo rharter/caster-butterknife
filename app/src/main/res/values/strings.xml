@@ -11,4 +11,5 @@
   <string name="label_logging_in">Logging in...</string>
   <string name="label_show_signup">Show Signup</string>
   <string name="label_show_login">Show Login</string>
+  <string name="avatar">avatar</string>
 </resources>

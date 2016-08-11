@@ -27,7 +27,7 @@ public class ItemDetailFragment extends Fragment {
   @BindView(R.id.details) TextView details;
 
 
-  private DummyContent.DummyItem mItem;
+  private DummyContent.User mItem;
 
   @Override public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
     View rootView = inflater.inflate(R.layout.item_detail, container, false);
@@ -46,13 +46,6 @@ public class ItemDetailFragment extends Fragment {
 
       Activity activity = this.getActivity();
       CollapsingToolbarLayout appBarLayout = (CollapsingToolbarLayout) activity.findViewById(R.id.toolbar_layout);
-      if (appBarLayout != null) {
-        appBarLayout.setTitle(mItem.content);
-      }
-
-      // Set values for the views
-      content.setText(mItem.content);
-      details.setText(mItem.details);
     }
   }
 }
